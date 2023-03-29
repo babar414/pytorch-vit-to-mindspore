@@ -12,13 +12,6 @@ from collections import OrderedDict
 
 def main(args):
     # load mindspore checkpoint
-    # pth_ptorch_path = "mae_pretrain_vit_base.pth"
-    # torch_pth = torch.load(pth_ptorch_path, map_location='cpu')
-    # pt_model_params = torch_pth['model']
-
-    # for par in pt_model_params.items():
-    #     print('par',par)
-
     ckpt_mindspore_path = args.model
     mindspore_ckpt = load_checkpoint(ckpt_mindspore_path)
 

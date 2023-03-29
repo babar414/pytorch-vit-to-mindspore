@@ -111,8 +111,8 @@ def main(args):
 
 
     # Save the parameters to a checkpoint file
-    file_name = f'mindspore_conv_{pth_ptorch_path[:-4]}.ckpt'
-    save_checkpoint(params_list, file_name)
+    pth_ptorch_path = pth_ptorch_path.strip().split('/')[-1] if '/' in pth_ptorch_path else pth_ptorch_path
+    file_name = f'pt_to_mindspore_conv_{pth_ptorch_path[:-4]}.ckpt'
 
     print("check_point_saved")
     print(".....")
